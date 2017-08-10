@@ -68,13 +68,25 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Inbred codes - Arica DAS 2016 D0 Nursery 071017.xlsx")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Eiquetas (con multiplicador JTW)(yoshi3).xlsm")>  _
         Public Property fileName() As String
             Get
                 Return CType(Me("fileName"),String)
             End Get
             Set
                 Me("fileName") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("intervalo")>  _
+        Public Property hojaNombre() As String
+            Get
+                Return CType(Me("hojaNombre"),String)
+            End Get
+            Set
+                Me("hojaNombre") = value
             End Set
         End Property
     End Class

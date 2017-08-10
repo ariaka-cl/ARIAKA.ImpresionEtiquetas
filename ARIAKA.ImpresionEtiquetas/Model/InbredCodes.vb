@@ -13,4 +13,10 @@
         Public Property GrupoB As Integer
         Public Property GrupoA As Integer
     End Class
+    Public Class Etiqueta
+        Public Property Familia As InbredCodes
+        Public Property NumeroMazorca As Integer
+        Public Property Correlativo As Integer
+
+    End Class
 End Namespace

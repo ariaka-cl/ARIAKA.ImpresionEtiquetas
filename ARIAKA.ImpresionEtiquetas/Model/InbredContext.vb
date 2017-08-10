@@ -19,23 +19,22 @@
 
             For Each fila As DataRow In dt.Rows
                 If Not IsDBNull(fila.Item(8)) Then
-                    listInbredCodes.Add(New Model.InbredCodes With {.InbredCode = If(IsDBNull(fila.Item(7)), "", fila.Item(7)),
+                    listInbredCodes.Add(New Model.InbredCodes With {.InbredCode = If(IsDBNull(fila.Item(13)), "", fila.Item(13)),
                                                                 .Population = If(IsDBNull(fila.Item(8)), "", fila.Item(8)),
-                                                                .SourceID = If(IsDBNull(fila.Item(9)), "", fila.Item(9).ToString),
-                                                                .Grupo = New Group With {.Zero = 2,
-                                                                                        .GrupoD = 3,
-                                                                                        .GrupoB = 23,
-                                                                                        .GrupoC = 12,
-                                                                                        .GrupoA = 15}})
+                                                                .SourceID = If(IsDBNull(fila.Item(10)), "", fila.Item(10).ToString),
+                                                                .Grupo = New Group With {.Zero = If(IsDBNull(fila.Item(66)), 0, fila.Item(66)),
+                                                                                        .GrupoD = If(IsDBNull(fila.Item(67)), 0, fila.Item(67)),
+                                                                                        .GrupoB = If(IsDBNull(fila.Item(68)), 0, fila.Item(68)),
+                                                                                        .GrupoC = If(IsDBNull(fila.Item(69)), 0, fila.Item(69)),
+                                                                                        .GrupoA = If(IsDBNull(fila.Item(70)), 0, fila.Item(70))}})
 
                 End If
             Next
-            listInbredCodes.RemoveAt(0)
             MyConnection.Close()
             Return listInbredCodes
         End Function
 
-        Public Function GetSheetNames() As List(Of String)
+        Public Function GetSheetNames() As String
             Dim MyConnection As OleDb.OleDbConnection = New OleDb.OleDbConnection(connection())
             MyConnection.Open()
             Try
@@ -48,7 +47,8 @@
                         listSheet.Add(drSheet("TABLE_NAME").ToString())
                     End If
                 Next
-                Return listSheet
+                Dim hojaNombre As String = listSheet.Where(Function(n) n.Contains(My.Settings.hojaNombre)).FirstOrDefault()
+                Return hojaNombre
             Finally
                 MyConnection.Close()
             End Try

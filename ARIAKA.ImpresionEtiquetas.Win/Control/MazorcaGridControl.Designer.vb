@@ -99,8 +99,6 @@ Partial Class MazorcaGridControl
         '
         Me.colCorrelativo.FieldName = "Correlativo"
         Me.colCorrelativo.Name = "colCorrelativo"
-        Me.colCorrelativo.Visible = True
-        Me.colCorrelativo.VisibleIndex = 3
         '
         'colGrupo
         '
@@ -108,7 +106,7 @@ Partial Class MazorcaGridControl
         Me.colGrupo.FieldName = "Grupo.Zero"
         Me.colGrupo.Name = "colGrupo"
         Me.colGrupo.Visible = True
-        Me.colGrupo.VisibleIndex = 4
+        Me.colGrupo.VisibleIndex = 3
         '
         'GridColumn1
         '
@@ -116,7 +114,7 @@ Partial Class MazorcaGridControl
         Me.GridColumn1.FieldName = "Grupo.GrupoD"
         Me.GridColumn1.Name = "GridColumn1"
         Me.GridColumn1.Visible = True
-        Me.GridColumn1.VisibleIndex = 5
+        Me.GridColumn1.VisibleIndex = 4
         '
         'GridColumn2
         '
@@ -124,7 +122,7 @@ Partial Class MazorcaGridControl
         Me.GridColumn2.FieldName = "Grupo.GrupoC"
         Me.GridColumn2.Name = "GridColumn2"
         Me.GridColumn2.Visible = True
-        Me.GridColumn2.VisibleIndex = 6
+        Me.GridColumn2.VisibleIndex = 5
         '
         'GridColumn3
         '
@@ -132,7 +130,7 @@ Partial Class MazorcaGridControl
         Me.GridColumn3.FieldName = "Grupo.GrupoB"
         Me.GridColumn3.Name = "GridColumn3"
         Me.GridColumn3.Visible = True
-        Me.GridColumn3.VisibleIndex = 7
+        Me.GridColumn3.VisibleIndex = 6
         '
         'GridColumn4
         '
@@ -140,7 +138,7 @@ Partial Class MazorcaGridControl
         Me.GridColumn4.FieldName = "Grupo.GrupoA"
         Me.GridColumn4.Name = "GridColumn4"
         Me.GridColumn4.Visible = True
-        Me.GridColumn4.VisibleIndex = 8
+        Me.GridColumn4.VisibleIndex = 7
         '
         'MazorcaGridControl
         '

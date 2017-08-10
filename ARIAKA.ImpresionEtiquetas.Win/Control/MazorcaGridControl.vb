@@ -10,7 +10,8 @@ Public Class MazorcaGridControl
 
     Public Sub FillGrid()
         Dim bd As New ARIAKA.ImpresionEtiquetas.Model.InbredContext
-        InbredCodesDTOBindingSource.DataSource = bd.SelectExcel(bd.GetSheetNames().Item(0))
+
+        InbredCodesDTOBindingSource.DataSource = bd.SelectExcel(bd.GetSheetNames())
         GridControl1.DataSource = InbredCodesDTOBindingSource.DataSource
     End Sub
 End Class
