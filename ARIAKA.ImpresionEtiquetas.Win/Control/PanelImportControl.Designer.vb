@@ -19,14 +19,15 @@ Partial Class PanelImportControl
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PanelImportControl))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupBox_etiquetas = New System.Windows.Forms.GroupBox()
-        Me.RadioButton_bulk = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_estacion = New System.Windows.Forms.RadioButton()
         Me.RadioButton_laboratorio = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_estacion = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_bulk = New System.Windows.Forms.RadioButton()
         Me.TableLayoutPanel_buttons = New System.Windows.Forms.TableLayoutPanel()
+        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
+        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.GroupBox_etiquetas.SuspendLayout()
         Me.TableLayoutPanel_buttons.SuspendLayout()
@@ -47,28 +48,6 @@ Partial Class PanelImportControl
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(555, 190)
         Me.TableLayoutPanel1.TabIndex = 0
         '
-        'SimpleButton1
-        '
-        Me.SimpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.SimpleButton1.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SimpleButton1.Appearance.Options.UseFont = True
-        Me.SimpleButton1.Location = New System.Drawing.Point(150, 20)
-        Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(119, 52)
-        Me.SimpleButton1.TabIndex = 0
-        Me.SimpleButton1.Text = "Importar"
-        '
-        'SimpleButton2
-        '
-        Me.SimpleButton2.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.SimpleButton2.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SimpleButton2.Appearance.Options.UseFont = True
-        Me.SimpleButton2.Location = New System.Drawing.Point(150, 112)
-        Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(119, 52)
-        Me.SimpleButton2.TabIndex = 1
-        Me.SimpleButton2.Text = "Generar "
-        '
         'GroupBox_etiquetas
         '
         Me.GroupBox_etiquetas.Controls.Add(Me.RadioButton_laboratorio)
@@ -82,17 +61,18 @@ Partial Class PanelImportControl
         Me.GroupBox_etiquetas.TabStop = False
         Me.GroupBox_etiquetas.Text = "Etiquetas"
         '
-        'RadioButton_bulk
+        'RadioButton_laboratorio
         '
-        Me.RadioButton_bulk.AutoSize = True
-        Me.RadioButton_bulk.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton_bulk.Location = New System.Drawing.Point(6, 20)
-        Me.RadioButton_bulk.Name = "RadioButton_bulk"
-        Me.RadioButton_bulk.Size = New System.Drawing.Size(57, 23)
-        Me.RadioButton_bulk.TabIndex = 0
-        Me.RadioButton_bulk.TabStop = True
-        Me.RadioButton_bulk.Text = "Bulk"
-        Me.RadioButton_bulk.UseVisualStyleBackColor = True
+        Me.RadioButton_laboratorio.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.RadioButton_laboratorio.AutoSize = True
+        Me.RadioButton_laboratorio.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton_laboratorio.Location = New System.Drawing.Point(75, 20)
+        Me.RadioButton_laboratorio.Name = "RadioButton_laboratorio"
+        Me.RadioButton_laboratorio.Size = New System.Drawing.Size(108, 23)
+        Me.RadioButton_laboratorio.TabIndex = 2
+        Me.RadioButton_laboratorio.TabStop = True
+        Me.RadioButton_laboratorio.Text = "Laboratorio"
+        Me.RadioButton_laboratorio.UseVisualStyleBackColor = True
         '
         'RadioButton_estacion
         '
@@ -107,18 +87,17 @@ Partial Class PanelImportControl
         Me.RadioButton_estacion.Text = "Estación"
         Me.RadioButton_estacion.UseVisualStyleBackColor = True
         '
-        'RadioButton_laboratorio
+        'RadioButton_bulk
         '
-        Me.RadioButton_laboratorio.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.RadioButton_laboratorio.AutoSize = True
-        Me.RadioButton_laboratorio.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton_laboratorio.Location = New System.Drawing.Point(75, 20)
-        Me.RadioButton_laboratorio.Name = "RadioButton_laboratorio"
-        Me.RadioButton_laboratorio.Size = New System.Drawing.Size(108, 23)
-        Me.RadioButton_laboratorio.TabIndex = 2
-        Me.RadioButton_laboratorio.TabStop = True
-        Me.RadioButton_laboratorio.Text = "Laboratorio"
-        Me.RadioButton_laboratorio.UseVisualStyleBackColor = True
+        Me.RadioButton_bulk.AutoSize = True
+        Me.RadioButton_bulk.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton_bulk.Location = New System.Drawing.Point(6, 20)
+        Me.RadioButton_bulk.Name = "RadioButton_bulk"
+        Me.RadioButton_bulk.Size = New System.Drawing.Size(57, 23)
+        Me.RadioButton_bulk.TabIndex = 0
+        Me.RadioButton_bulk.TabStop = True
+        Me.RadioButton_bulk.Text = "Bulk"
+        Me.RadioButton_bulk.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel_buttons
         '
@@ -135,6 +114,30 @@ Partial Class PanelImportControl
         Me.TableLayoutPanel_buttons.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel_buttons.Size = New System.Drawing.Size(272, 184)
         Me.TableLayoutPanel_buttons.TabIndex = 3
+        '
+        'SimpleButton2
+        '
+        Me.SimpleButton2.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.SimpleButton2.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SimpleButton2.Appearance.Options.UseFont = True
+        Me.SimpleButton2.Image = CType(resources.GetObject("SimpleButton2.Image"), System.Drawing.Image)
+        Me.SimpleButton2.Location = New System.Drawing.Point(136, 112)
+        Me.SimpleButton2.Name = "SimpleButton2"
+        Me.SimpleButton2.Size = New System.Drawing.Size(133, 52)
+        Me.SimpleButton2.TabIndex = 1
+        Me.SimpleButton2.Text = "Generar "
+        '
+        'SimpleButton1
+        '
+        Me.SimpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.SimpleButton1.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SimpleButton1.Appearance.Options.UseFont = True
+        Me.SimpleButton1.Image = CType(resources.GetObject("SimpleButton1.Image"), System.Drawing.Image)
+        Me.SimpleButton1.Location = New System.Drawing.Point(136, 20)
+        Me.SimpleButton1.Name = "SimpleButton1"
+        Me.SimpleButton1.Size = New System.Drawing.Size(133, 52)
+        Me.SimpleButton1.TabIndex = 0
+        Me.SimpleButton1.Text = "Importar"
         '
         'PanelImportControl
         '

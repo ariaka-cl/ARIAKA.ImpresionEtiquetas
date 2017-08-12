@@ -19,6 +19,7 @@ Partial Class MainForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.MazorcaGridControl1 = New ARIAKA.ImpresionEtiquetas.Win.MazorcaGridControl()
         Me.PanelImportControl1 = New ARIAKA.ImpresionEtiquetas.Win.PanelImportControl()
@@ -65,6 +66,7 @@ Partial Class MainForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(934, 451)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.LookAndFeel.SkinMaskColor = System.Drawing.Color.White
         Me.LookAndFeel.SkinName = "DevExpress Dark Style"
         Me.Name = "MainForm"
