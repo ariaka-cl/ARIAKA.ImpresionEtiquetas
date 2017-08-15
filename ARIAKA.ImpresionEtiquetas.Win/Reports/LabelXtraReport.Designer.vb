@@ -40,9 +40,9 @@ Partial Public Class LabelXtraReport
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.CalculatedField1 = New DevExpress.XtraReports.UI.CalculatedField()
-        Me.XrTableCell1 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.EtiquetasDataSource = New DevExpress.DataAccess.ObjectBinding.ObjectDataSource(Me.components)
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CalculatedField2 = New DevExpress.XtraReports.UI.CalculatedField()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EtiquetasDataSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -146,14 +146,14 @@ Partial Public Class LabelXtraReport
         '
         'XrTableRow4
         '
-        Me.XrTableRow4.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell7, Me.XrTableCell1, Me.XrTableCell8})
+        Me.XrTableRow4.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell7, Me.XrTableCell8})
         Me.XrTableRow4.Dpi = 254.0!
         Me.XrTableRow4.Name = "XrTableRow4"
         Me.XrTableRow4.Weight = 0.6666667667899544R
         '
         'XrTableCell7
         '
-        Me.XrTableCell7.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Familia.InbredCode")})
+        Me.XrTableCell7.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "CalculatedField2")})
         Me.XrTableCell7.Dpi = 254.0!
         Me.XrTableCell7.Name = "XrTableCell7"
         Me.XrTableCell7.Weight = 1.6201334019022615R
@@ -167,7 +167,7 @@ Partial Public Class LabelXtraReport
         Me.XrTableCell8.StylePriority.UseFont = False
         Me.XrTableCell8.StylePriority.UseTextAlignment = False
         Me.XrTableCell8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.XrTableCell8.Weight = 1.0405718957138774R
+        Me.XrTableCell8.Weight = 1.3776558258498568R
         '
         'XrTableRow5
         '
@@ -214,15 +214,6 @@ Partial Public Class LabelXtraReport
         Me.CalculatedField1.FieldType = DevExpress.XtraReports.UI.FieldType.[String]
         Me.CalculatedField1.Name = "CalculatedField1"
         '
-        'XrTableCell1
-        '
-        Me.XrTableCell1.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "CalculatedField1")})
-        Me.XrTableCell1.Dpi = 254.0!
-        Me.XrTableCell1.Font = New System.Drawing.Font("Arial Narrow", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrTableCell1.Name = "XrTableCell1"
-        Me.XrTableCell1.StylePriority.UseFont = False
-        Me.XrTableCell1.Weight = 0.33708393013597937R
-        '
         'EtiquetasDataSource
         '
         Me.EtiquetasDataSource.DataSource = GetType(ARIAKA.ImpresionEtiquetas.Win.DTO.EtiquetaDTO)
@@ -232,10 +223,16 @@ Partial Public Class LabelXtraReport
         '
         Me.BindingSource1.DataSource = GetType(ARIAKA.ImpresionEtiquetas.Win.DTO.InbredCodesDTO)
         '
+        'CalculatedField2
+        '
+        Me.CalculatedField2.DisplayName = "inbredCorrelativo"
+        Me.CalculatedField2.Expression = "Concat(Concat([Familia.InbredCode] ,'.'),[CalculatedField1] )"
+        Me.CalculatedField2.Name = "CalculatedField2"
+        '
         'LabelXtraReport
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin})
-        Me.CalculatedFields.AddRange(New DevExpress.XtraReports.UI.CalculatedField() {Me.CalculatedField1})
+        Me.CalculatedFields.AddRange(New DevExpress.XtraReports.UI.CalculatedField() {Me.CalculatedField1, Me.CalculatedField2})
         Me.ComponentStorage.AddRange(New System.ComponentModel.IComponent() {Me.EtiquetasDataSource})
         Me.DataSource = Me.EtiquetasDataSource
         Me.Dpi = 254.0!
@@ -274,5 +271,5 @@ Partial Public Class LabelXtraReport
     Friend WithEvents XrTableRow5 As DevExpress.XtraReports.UI.XRTableRow
     Friend WithEvents XrTableCell9 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents XrTableCell10 As DevExpress.XtraReports.UI.XRTableCell
-    Friend WithEvents XrTableCell1 As DevExpress.XtraReports.UI.XRTableCell
+    Friend WithEvents CalculatedField2 As DevExpress.XtraReports.UI.CalculatedField
 End Class

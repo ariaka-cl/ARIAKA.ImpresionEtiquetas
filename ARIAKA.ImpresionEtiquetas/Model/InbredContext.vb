@@ -24,8 +24,8 @@
                                                                 .SourceID = If(IsDBNull(fila.Item(10)), "", fila.Item(10).ToString),
                                                                 .Grupo = New Group With {.Zero = If(IsDBNull(fila.Item(66)), 0, fila.Item(66)),
                                                                                         .GrupoD = If(IsDBNull(fila.Item(67)), 0, fila.Item(67)),
-                                                                                        .GrupoB = If(IsDBNull(fila.Item(68)), 0, fila.Item(68)),
-                                                                                        .GrupoC = If(IsDBNull(fila.Item(69)), 0, fila.Item(69)),
+                                                                                        .GrupoC = If(IsDBNull(fila.Item(68)), 0, fila.Item(68)),
+                                                                                        .GrupoB = If(IsDBNull(fila.Item(69)), 0, fila.Item(69)),
                                                                                         .GrupoA = If(IsDBNull(fila.Item(70)), 0, fila.Item(70))}})
 
                 End If
