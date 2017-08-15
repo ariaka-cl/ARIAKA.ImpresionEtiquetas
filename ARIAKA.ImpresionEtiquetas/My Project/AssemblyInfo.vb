@@ -9,11 +9,11 @@ Imports System.Runtime.InteropServices
 ' Revisar los valores de los atributos del ensamblado
 
 <Assembly: AssemblyTitle("ARIAKA.ImpresionEtiquetas")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("Hewlett-Packard Company")> 
-<Assembly: AssemblyProduct("ARIAKA.ImpresionEtiquetas")> 
-<Assembly: AssemblyCopyright("Copyright © Hewlett-Packard Company 2017")> 
-<Assembly: AssemblyTrademark("")> 
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("ARIAKA LTDA")>
+<Assembly: AssemblyProduct("ARIAKA.ImpresionEtiquetas")>
+<Assembly: AssemblyCopyright("TUNICHE © 2017, Desarrollado por ARIAKA")>
+<Assembly: AssemblyTrademark("ARIAKA")>
 
 <Assembly: ComVisible(False)>
 

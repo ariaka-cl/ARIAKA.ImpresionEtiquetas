@@ -162,4 +162,10 @@
         QgsH/ARa7EGM5bSIApDl3sRaTpID6NlMH5ztgdEQGA2B0RCgZwgAAI/C1KkRLNVgAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="OpenFileDialog_inputs.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="SaveFileDialog_resporte.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>191, 17</value>
+  </metadata>
 </root>

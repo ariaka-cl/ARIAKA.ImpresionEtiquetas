@@ -43,19 +43,6 @@
                             contador = contador + 1
                         Next
                     End If
-
-                    'If inbredCode.Grupo.GrupoD <> 0 Then
-                    '    Dim fin As Integer = inbredCode.Grupo.GrupoD
-                    '    For i As Integer = 0 To fin - 1
-                    '        Dim dto As New Model.Etiqueta With {.Familia = inbredCode,
-                    '                                .Correlativo = contador,
-                    '                                .Grupo = "D (1-2 k)"}
-
-                    '        dto.QRCode = GenerarQRCodeData(dto)
-                    '        listDtoEtiquetas.Add(dto)
-                    '        contador = contador + 1
-                    '    Next
-                    'End If
                 End If
                 contador = 1
             Next
@@ -67,5 +54,73 @@
             Return qrCode
         End Function
 
+        Public Function ReporteBulk(inbredList As List(Of Model.InbredCodes)) As List(Of Model.Etiqueta)
+            Dim listDtoEtiquetas As New List(Of Model.Etiqueta)
+            Dim contador As Integer = 1
+            For Each inbredCode As Model.InbredCodes In inbredList
+                If inbredCode.Grupo.GrupoD <> 0 OrElse
+                        inbredCode.Grupo.GrupoC <> 0 OrElse inbredCode.Grupo.GrupoB <> 0 OrElse
+                        inbredCode.Grupo.GrupoA <> 0 Then
+
+                    If inbredCode.Grupo.GrupoD <> 0 Then
+                        Dim dto As New Model.Etiqueta With {.Familia = inbredCode,
+                                                    .Correlativo = contador,
+                                                    .Grupo = "Bulk"}
+                        dto.QRCode = GenerarQRCodeData(dto)
+                        listDtoEtiquetas.Add(dto)
+                        contador = contador + 1
+                    End If
+                End If
+            Next
+            Return listDtoEtiquetas
+        End Function
+
+        Public Function PopulateReporteRemanenteD1(inbredList As List(Of Model.InbredCodes), eti As String) As List(Of Model.Etiqueta)
+            Dim listDtoEtiquetas As New List(Of Model.Etiqueta)
+            Dim contador As Integer = 1
+
+            For Each inbredCode As Model.InbredCodes In inbredList
+                If inbredCode.Grupo.GrupoD <> 0 OrElse
+                        inbredCode.Grupo.GrupoC <> 0 OrElse inbredCode.Grupo.GrupoB <> 0 OrElse
+                        inbredCode.Grupo.GrupoA <> 0 Then
+
+                    If inbredCode.Grupo.GrupoA <> 0 Then
+                        Dim fin As Integer = inbredCode.Grupo.GrupoA
+                        For i As Integer = 0 To fin - 1
+                            Dim dto As New Model.Etiqueta With {.Familia = inbredCode,
+                                                    .Correlativo = contador,
+                                                    .Grupo = eti}
+                            dto.QRCode = GenerarQRCodeData(dto)
+                            listDtoEtiquetas.Add(dto)
+                            contador = contador + 1
+                        Next
+                    End If
+                    If inbredCode.Grupo.GrupoB <> 0 Then
+                        Dim fin As Integer = inbredCode.Grupo.GrupoB
+                        For i As Integer = 0 To fin - 1
+                            Dim dto As New Model.Etiqueta With {.Familia = inbredCode,
+                                                    .Correlativo = contador,
+                                                    .Grupo = eti}
+                            dto.QRCode = GenerarQRCodeData(dto)
+                            listDtoEtiquetas.Add(dto)
+                            contador = contador + 1
+                        Next
+                    End If
+                    If inbredCode.Grupo.GrupoC <> 0 Then
+                        Dim fin As Integer = inbredCode.Grupo.GrupoC
+                        For i As Integer = 0 To fin - 1
+                            Dim dto As New Model.Etiqueta With {.Familia = inbredCode,
+                                                    .Correlativo = contador,
+                                                    .Grupo = eti}
+                            dto.QRCode = GenerarQRCodeData(dto)
+                            listDtoEtiquetas.Add(dto)
+                            contador = contador + 1
+                        Next
+                    End If
+                End If
+                contador = 1
+            Next
+            Return listDtoEtiquetas
+        End Function
     End Class
 End Namespace

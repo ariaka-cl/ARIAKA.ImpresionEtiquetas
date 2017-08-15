@@ -56,30 +56,6 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("C:\Users\BRYAN\Downloads\")>  _
-        Public Property path() As String
-            Get
-                Return CType(Me("path"),String)
-            End Get
-            Set
-                Me("path") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Eiquetas (con multiplicador JTW)(yoshi3).xlsm")>  _
-        Public Property fileName() As String
-            Get
-                Return CType(Me("fileName"),String)
-            End Get
-            Set
-                Me("fileName") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("intervalo")>  _
         Public Property hojaNombre() As String
             Get

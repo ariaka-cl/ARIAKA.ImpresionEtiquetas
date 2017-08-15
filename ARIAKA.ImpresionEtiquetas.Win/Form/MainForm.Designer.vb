@@ -66,9 +66,11 @@ Partial Class MainForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(934, 451)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.HelpButton = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.LookAndFeel.SkinMaskColor = System.Drawing.Color.White
         Me.LookAndFeel.SkinName = "DevExpress Dark Style"
+        Me.MaximizeBox = False
         Me.Name = "MainForm"
         Me.Text = "TUNICHE- Impresión Etiquetas"
         Me.TableLayoutPanel1.ResumeLayout(False)

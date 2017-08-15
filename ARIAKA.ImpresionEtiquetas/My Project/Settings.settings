@@ -2,12 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
   <Profiles />
   <Settings>
-    <Setting Name="path" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Users\BRYAN\Downloads\</Value>
-    </Setting>
-    <Setting Name="fileName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Eiquetas (con multiplicador JTW)(yoshi3).xlsm</Value>
-    </Setting>
     <Setting Name="hojaNombre" Type="System.String" Scope="User">
       <Value Profile="(Default)">intervalo</Value>
     </Setting>
