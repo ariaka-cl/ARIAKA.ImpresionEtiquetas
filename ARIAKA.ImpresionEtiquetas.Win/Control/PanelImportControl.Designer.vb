@@ -22,6 +22,8 @@ Partial Class PanelImportControl
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PanelImportControl))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox_etiquetas = New System.Windows.Forms.GroupBox()
+        Me.RadioButton_Grupo = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_D1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton_laboratorio = New System.Windows.Forms.RadioButton()
         Me.RadioButton_remanente = New System.Windows.Forms.RadioButton()
         Me.RadioButton_bulk = New System.Windows.Forms.RadioButton()
@@ -31,7 +33,6 @@ Partial Class PanelImportControl
         Me.LabelControl_fileName = New DevExpress.XtraEditors.LabelControl()
         Me.OpenFileDialog_inputs = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog_resporte = New System.Windows.Forms.SaveFileDialog()
-        Me.RadioButton_D1 = New System.Windows.Forms.RadioButton()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.GroupBox_etiquetas.SuspendLayout()
         Me.TableLayoutPanel_buttons.SuspendLayout()
@@ -54,6 +55,7 @@ Partial Class PanelImportControl
         '
         'GroupBox_etiquetas
         '
+        Me.GroupBox_etiquetas.Controls.Add(Me.RadioButton_Grupo)
         Me.GroupBox_etiquetas.Controls.Add(Me.RadioButton_D1)
         Me.GroupBox_etiquetas.Controls.Add(Me.RadioButton_laboratorio)
         Me.GroupBox_etiquetas.Controls.Add(Me.RadioButton_remanente)
@@ -66,13 +68,38 @@ Partial Class PanelImportControl
         Me.GroupBox_etiquetas.TabStop = False
         Me.GroupBox_etiquetas.Text = "Etiquetas"
         '
+        'RadioButton_Grupo
+        '
+        Me.RadioButton_Grupo.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.RadioButton_Grupo.AutoSize = True
+        Me.RadioButton_Grupo.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton_Grupo.Location = New System.Drawing.Point(141, 62)
+        Me.RadioButton_Grupo.Name = "RadioButton_Grupo"
+        Me.RadioButton_Grupo.Size = New System.Drawing.Size(71, 23)
+        Me.RadioButton_Grupo.TabIndex = 4
+        Me.RadioButton_Grupo.TabStop = True
+        Me.RadioButton_Grupo.Text = "Grupo"
+        Me.RadioButton_Grupo.UseVisualStyleBackColor = True
+        '
+        'RadioButton_D1
+        '
+        Me.RadioButton_D1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RadioButton_D1.AutoSize = True
+        Me.RadioButton_D1.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton_D1.Location = New System.Drawing.Point(267, 20)
+        Me.RadioButton_D1.Name = "RadioButton_D1"
+        Me.RadioButton_D1.Size = New System.Drawing.Size(47, 23)
+        Me.RadioButton_D1.TabIndex = 3
+        Me.RadioButton_D1.TabStop = True
+        Me.RadioButton_D1.Text = "D1"
+        Me.RadioButton_D1.UseVisualStyleBackColor = True
+        '
         'RadioButton_laboratorio
         '
-        Me.RadioButton_laboratorio.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.RadioButton_laboratorio.AutoSize = True
         Me.RadioButton_laboratorio.Checked = True
         Me.RadioButton_laboratorio.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton_laboratorio.Location = New System.Drawing.Point(82, 20)
+        Me.RadioButton_laboratorio.Location = New System.Drawing.Point(6, 20)
         Me.RadioButton_laboratorio.Name = "RadioButton_laboratorio"
         Me.RadioButton_laboratorio.Size = New System.Drawing.Size(108, 23)
         Me.RadioButton_laboratorio.TabIndex = 2
@@ -85,7 +112,7 @@ Partial Class PanelImportControl
         Me.RadioButton_remanente.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RadioButton_remanente.AutoSize = True
         Me.RadioButton_remanente.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton_remanente.Location = New System.Drawing.Point(196, 20)
+        Me.RadioButton_remanente.Location = New System.Drawing.Point(106, 20)
         Me.RadioButton_remanente.Name = "RadioButton_remanente"
         Me.RadioButton_remanente.Size = New System.Drawing.Size(106, 23)
         Me.RadioButton_remanente.TabIndex = 1
@@ -97,7 +124,7 @@ Partial Class PanelImportControl
         '
         Me.RadioButton_bulk.AutoSize = True
         Me.RadioButton_bulk.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton_bulk.Location = New System.Drawing.Point(6, 20)
+        Me.RadioButton_bulk.Location = New System.Drawing.Point(6, 62)
         Me.RadioButton_bulk.Name = "RadioButton_bulk"
         Me.RadioButton_bulk.Size = New System.Drawing.Size(57, 23)
         Me.RadioButton_bulk.TabIndex = 0
@@ -159,19 +186,6 @@ Partial Class PanelImportControl
         '
         Me.OpenFileDialog_inputs.FileName = "OpenFileDialog_Imputs"
         '
-        'RadioButton_D1
-        '
-        Me.RadioButton_D1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RadioButton_D1.AutoSize = True
-        Me.RadioButton_D1.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton_D1.Location = New System.Drawing.Point(308, 20)
-        Me.RadioButton_D1.Name = "RadioButton_D1"
-        Me.RadioButton_D1.Size = New System.Drawing.Size(47, 23)
-        Me.RadioButton_D1.TabIndex = 3
-        Me.RadioButton_D1.TabStop = True
-        Me.RadioButton_D1.Text = "D1"
-        Me.RadioButton_D1.UseVisualStyleBackColor = True
-        '
         'PanelImportControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -200,4 +214,5 @@ Partial Class PanelImportControl
     Friend WithEvents LabelControl_fileName As DevExpress.XtraEditors.LabelControl
     Friend WithEvents SaveFileDialog_resporte As Windows.Forms.SaveFileDialog
     Friend WithEvents RadioButton_D1 As Windows.Forms.RadioButton
+    Friend WithEvents RadioButton_Grupo As Windows.Forms.RadioButton
 End Class

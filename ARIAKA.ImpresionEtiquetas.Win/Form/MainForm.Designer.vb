@@ -39,15 +39,15 @@ Partial Class MainForm
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(934, 451)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(934, 522)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'MazorcaGridControl1
         '
         Me.MazorcaGridControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MazorcaGridControl1.Location = New System.Drawing.Point(3, 93)
+        Me.MazorcaGridControl1.Location = New System.Drawing.Point(3, 107)
         Me.MazorcaGridControl1.Name = "MazorcaGridControl1"
-        Me.MazorcaGridControl1.Size = New System.Drawing.Size(928, 355)
+        Me.MazorcaGridControl1.Size = New System.Drawing.Size(928, 412)
         Me.MazorcaGridControl1.TabIndex = 0
         '
         'PanelImportControl1
@@ -55,7 +55,7 @@ Partial Class MainForm
         Me.PanelImportControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelImportControl1.Location = New System.Drawing.Point(3, 3)
         Me.PanelImportControl1.Name = "PanelImportControl1"
-        Me.PanelImportControl1.Size = New System.Drawing.Size(928, 84)
+        Me.PanelImportControl1.Size = New System.Drawing.Size(928, 98)
         Me.PanelImportControl1.TabIndex = 1
         '
         'MainForm
@@ -64,7 +64,7 @@ Partial Class MainForm
         Me.Appearance.Options.UseBackColor = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(934, 451)
+        Me.ClientSize = New System.Drawing.Size(934, 522)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.HelpButton = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -72,6 +72,7 @@ Partial Class MainForm
         Me.LookAndFeel.SkinName = "DevExpress Dark Style"
         Me.MaximizeBox = False
         Me.Name = "MainForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "TUNICHE- Impresión Etiquetas"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)

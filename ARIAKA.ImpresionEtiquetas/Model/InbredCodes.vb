@@ -19,6 +19,7 @@
         Public Property Correlativo As Integer
         Public Property Grupo As String
         Public Property QRCode As String
+        Public Property Etiqueta As String
 
     End Class
 End Namespace

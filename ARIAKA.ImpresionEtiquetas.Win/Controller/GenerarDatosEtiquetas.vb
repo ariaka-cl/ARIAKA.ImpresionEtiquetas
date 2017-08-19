@@ -56,7 +56,7 @@
 
         Public Function ReporteBulk(inbredList As List(Of Model.InbredCodes)) As List(Of Model.Etiqueta)
             Dim listDtoEtiquetas As New List(Of Model.Etiqueta)
-            Dim contador As Integer = 1
+
             For Each inbredCode As Model.InbredCodes In inbredList
                 If inbredCode.Grupo.GrupoD <> 0 OrElse
                         inbredCode.Grupo.GrupoC <> 0 OrElse inbredCode.Grupo.GrupoB <> 0 OrElse
@@ -64,18 +64,36 @@
 
                     If inbredCode.Grupo.GrupoD <> 0 Then
                         Dim dto As New Model.Etiqueta With {.Familia = inbredCode,
-                                                    .Correlativo = contador,
+                                                    .Etiqueta = "",
                                                     .Grupo = "Bulk"}
                         dto.QRCode = GenerarQRCodeData(dto)
                         listDtoEtiquetas.Add(dto)
-                        contador = contador + 1
+
                     End If
                 End If
             Next
             Return listDtoEtiquetas
         End Function
 
-        Public Function PopulateReporteRemanenteD1(inbredList As List(Of Model.InbredCodes), eti As String) As List(Of Model.Etiqueta)
+        'Public Function ReporteRemanente(inbredList As List(Of Model.InbredCodes)) As List(Of Model.Etiqueta)
+        '    Dim listDtoEtiquetas As New List(Of Model.Etiqueta)
+
+        '    For Each inbredCode As Model.InbredCodes In inbredList
+        '        If inbredCode.Grupo.GrupoC <> 0 OrElse inbredCode.Grupo.GrupoB <> 0 OrElse
+        '                inbredCode.Grupo.GrupoA <> 0 Then
+
+        '            Dim dto As New Model.Etiqueta With {.Familia = inbredCode,
+        '                                            .Correlativo = Nothing,
+        '                                            .Grupo = "Remanente"}
+        '            dto.QRCode = GenerarQRCodeData(dto)
+        '            listDtoEtiquetas.Add(dto)
+
+        '        End If
+        '    Next
+        '    Return listDtoEtiquetas
+        'End Function
+
+        Public Function PopulateReporteLabD1Remanente(inbredList As List(Of Model.InbredCodes), eti As String) As List(Of Model.Etiqueta)
             Dim listDtoEtiquetas As New List(Of Model.Etiqueta)
             Dim contador As Integer = 1
 
@@ -89,7 +107,8 @@
                         For i As Integer = 0 To fin - 1
                             Dim dto As New Model.Etiqueta With {.Familia = inbredCode,
                                                     .Correlativo = contador,
-                                                    .Grupo = eti}
+                                                    .Grupo = "A (+20 k)",
+                                                    .Etiqueta = eti}
                             dto.QRCode = GenerarQRCodeData(dto)
                             listDtoEtiquetas.Add(dto)
                             contador = contador + 1
@@ -100,7 +119,8 @@
                         For i As Integer = 0 To fin - 1
                             Dim dto As New Model.Etiqueta With {.Familia = inbredCode,
                                                     .Correlativo = contador,
-                                                    .Grupo = eti}
+                                                    .Grupo = "B (10-19 k)",
+                                                    .Etiqueta = eti}
                             dto.QRCode = GenerarQRCodeData(dto)
                             listDtoEtiquetas.Add(dto)
                             contador = contador + 1
@@ -111,7 +131,8 @@
                         For i As Integer = 0 To fin - 1
                             Dim dto As New Model.Etiqueta With {.Familia = inbredCode,
                                                     .Correlativo = contador,
-                                                    .Grupo = eti}
+                                                    .Grupo = "C (3-9 k)",
+                                                    .Etiqueta = eti}
                             dto.QRCode = GenerarQRCodeData(dto)
                             listDtoEtiquetas.Add(dto)
                             contador = contador + 1

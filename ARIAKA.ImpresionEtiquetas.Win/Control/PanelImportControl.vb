@@ -25,11 +25,13 @@ Public Class PanelImportControl
             Case "Bulk"
                 report.EtiquetasDataSource.DataSource = ctrller.ReporteBulk(inbredList)
             Case "Laboratorio"
-                report.EtiquetasDataSource.DataSource = ctrller.PopulateReporte(inbredList)
+                report.EtiquetasDataSource.DataSource = ctrller.PopulateReporteLabD1Remanente(inbredList, "LAB")
             Case "Remanente"
-                report.EtiquetasDataSource.DataSource = ctrller.PopulateReporteRemanenteD1(inbredList, etiqueta)
+                report.EtiquetasDataSource.DataSource = ctrller.PopulateReporteLabD1Remanente(inbredList, etiqueta)
             Case "D1"
-                report.EtiquetasDataSource.DataSource = ctrller.PopulateReporteRemanenteD1(inbredList, etiqueta)
+                report.EtiquetasDataSource.DataSource = ctrller.PopulateReporteLabD1Remanente(inbredList, etiqueta)
+            Case "Grupo"
+                report.EtiquetasDataSource.DataSource = ctrller.PopulateReporte(inbredList)
         End Select
         WaitPanel(True, "Generando etiquetas")
         report.ExportToPdf(filePathToSave)
