@@ -27,7 +27,7 @@ Public Class PanelImportControl
             Case "Laboratorio"
                 report.EtiquetasDataSource.DataSource = ctrller.PopulateReporteLabD1Remanente(inbredList, "LAB")
             Case "Remanente"
-                report.EtiquetasDataSource.DataSource = ctrller.PopulateReporteLabD1Remanente(inbredList, etiqueta)
+                report.EtiquetasDataSource.DataSource = ctrller.PopulateReporteLabD1Remanente(inbredList, "REM")
             Case "D1"
                 report.EtiquetasDataSource.DataSource = ctrller.PopulateReporteLabD1Remanente(inbredList, etiqueta)
             Case "Grupo"

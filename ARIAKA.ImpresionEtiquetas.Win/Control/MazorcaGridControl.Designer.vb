@@ -33,6 +33,7 @@ Partial Class MazorcaGridControl
         Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.TableLayoutPanel_grid.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InbredCodesDTOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,7 +72,7 @@ Partial Class MazorcaGridControl
         '
         Me.GridView1.Appearance.HeaderPanel.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GridView1.Appearance.HeaderPanel.Options.UseFont = True
-        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colInbredCode, Me.colPopulation, Me.colSourceID, Me.colCorrelativo, Me.colGrupo, Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn4})
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn5, Me.colInbredCode, Me.colPopulation, Me.colSourceID, Me.colCorrelativo, Me.colGrupo, Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn4})
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.Name = "GridView1"
         Me.GridView1.OptionsView.ShowGroupPanel = False
@@ -81,21 +82,21 @@ Partial Class MazorcaGridControl
         Me.colInbredCode.FieldName = "InbredCode"
         Me.colInbredCode.Name = "colInbredCode"
         Me.colInbredCode.Visible = True
-        Me.colInbredCode.VisibleIndex = 0
+        Me.colInbredCode.VisibleIndex = 1
         '
         'colPopulation
         '
         Me.colPopulation.FieldName = "Population"
         Me.colPopulation.Name = "colPopulation"
         Me.colPopulation.Visible = True
-        Me.colPopulation.VisibleIndex = 1
+        Me.colPopulation.VisibleIndex = 2
         '
         'colSourceID
         '
         Me.colSourceID.FieldName = "SourceID"
         Me.colSourceID.Name = "colSourceID"
         Me.colSourceID.Visible = True
-        Me.colSourceID.VisibleIndex = 2
+        Me.colSourceID.VisibleIndex = 3
         '
         'colCorrelativo
         '
@@ -114,7 +115,7 @@ Partial Class MazorcaGridControl
         Me.GridColumn1.FieldName = "Grupo.GrupoD"
         Me.GridColumn1.Name = "GridColumn1"
         Me.GridColumn1.Visible = True
-        Me.GridColumn1.VisibleIndex = 3
+        Me.GridColumn1.VisibleIndex = 4
         '
         'GridColumn2
         '
@@ -122,7 +123,7 @@ Partial Class MazorcaGridControl
         Me.GridColumn2.FieldName = "Grupo.GrupoC"
         Me.GridColumn2.Name = "GridColumn2"
         Me.GridColumn2.Visible = True
-        Me.GridColumn2.VisibleIndex = 4
+        Me.GridColumn2.VisibleIndex = 5
         '
         'GridColumn3
         '
@@ -130,7 +131,7 @@ Partial Class MazorcaGridControl
         Me.GridColumn3.FieldName = "Grupo.GrupoB"
         Me.GridColumn3.Name = "GridColumn3"
         Me.GridColumn3.Visible = True
-        Me.GridColumn3.VisibleIndex = 5
+        Me.GridColumn3.VisibleIndex = 6
         '
         'GridColumn4
         '
@@ -138,7 +139,15 @@ Partial Class MazorcaGridControl
         Me.GridColumn4.FieldName = "Grupo.GrupoA"
         Me.GridColumn4.Name = "GridColumn4"
         Me.GridColumn4.Visible = True
-        Me.GridColumn4.VisibleIndex = 6
+        Me.GridColumn4.VisibleIndex = 7
+        '
+        'GridColumn5
+        '
+        Me.GridColumn5.Caption = "Breeding Program"
+        Me.GridColumn5.FieldName = "BreedgingProgram"
+        Me.GridColumn5.Name = "GridColumn5"
+        Me.GridColumn5.Visible = True
+        Me.GridColumn5.VisibleIndex = 0
         '
         'MazorcaGridControl
         '
@@ -168,4 +177,5 @@ Partial Class MazorcaGridControl
     Friend WithEvents GridColumn2 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn3 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn5 As DevExpress.XtraGrid.Columns.GridColumn
 End Class

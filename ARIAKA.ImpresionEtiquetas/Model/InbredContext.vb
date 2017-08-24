@@ -18,10 +18,11 @@
             Dim listInbredCodes As New List(Of Model.InbredCodes)
 
             For Each fila As DataRow In dt.Rows
-                If Not IsDBNull(fila.Item(0)) AndAlso Not fila.Item(0).ToString().Contains("Source") Then
-                    listInbredCodes.Add(New Model.InbredCodes With {.InbredCode = If(IsDBNull(fila.Item(1)), "", fila.Item(1)),
+                If Not IsDBNull(fila.Item(0)) AndAlso Not fila.Item(1).ToString().Contains("Source") Then
+                    listInbredCodes.Add(New Model.InbredCodes With {.BreedgingProgram = If(IsDBNull(fila.Item(0)), "", fila.Item(0)),
+                                                                    .SourceID = If(IsDBNull(fila.Item(1)), "", fila.Item(1)),
                                                                 .Population = If(IsDBNull(fila.Item(2)), "", fila.Item(2)),
-                                                                .SourceID = If(IsDBNull(fila.Item(0)), "", fila.Item(0).ToString),
+                                                                .InbredCode = If(IsDBNull(fila.Item(3)), "", fila.Item(3).ToString),
                                                                 .Grupo = New Group With {.Zero = If(IsDBNull(fila.Item(4)), 0, fila.Item(4)),
                                                                                         .GrupoD = If(IsDBNull(fila.Item(5)), 0, fila.Item(5)),
                                                                                         .GrupoC = If(IsDBNull(fila.Item(6)), 0, fila.Item(6)),

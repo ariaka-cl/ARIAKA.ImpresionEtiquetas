@@ -163,12 +163,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Reports\EtiquetasXtraReport.Designer.vb">
-      <DependentUpon>EtiquetasXtraReport.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\EtiquetasXtraReport.vb">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Reports\LabelXtraReport.Designer.vb">
       <DependentUpon>LabelXtraReport.vb</DependentUpon>
     </Compile>
@@ -195,9 +189,6 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\EtiquetasXtraReport.resx">
-      <DependentUpon>EtiquetasXtraReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\LabelXtraReport.resx">
       <DependentUpon>LabelXtraReport.vb</DependentUpon>

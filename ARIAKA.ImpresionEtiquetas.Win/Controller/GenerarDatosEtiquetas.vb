@@ -75,24 +75,6 @@
             Return listDtoEtiquetas
         End Function
 
-        'Public Function ReporteRemanente(inbredList As List(Of Model.InbredCodes)) As List(Of Model.Etiqueta)
-        '    Dim listDtoEtiquetas As New List(Of Model.Etiqueta)
-
-        '    For Each inbredCode As Model.InbredCodes In inbredList
-        '        If inbredCode.Grupo.GrupoC <> 0 OrElse inbredCode.Grupo.GrupoB <> 0 OrElse
-        '                inbredCode.Grupo.GrupoA <> 0 Then
-
-        '            Dim dto As New Model.Etiqueta With {.Familia = inbredCode,
-        '                                            .Correlativo = Nothing,
-        '                                            .Grupo = "Remanente"}
-        '            dto.QRCode = GenerarQRCodeData(dto)
-        '            listDtoEtiquetas.Add(dto)
-
-        '        End If
-        '    Next
-        '    Return listDtoEtiquetas
-        'End Function
-
         Public Function PopulateReporteLabD1Remanente(inbredList As List(Of Model.InbredCodes), eti As String) As List(Of Model.Etiqueta)
             Dim listDtoEtiquetas As New List(Of Model.Etiqueta)
             Dim contador As Integer = 1
